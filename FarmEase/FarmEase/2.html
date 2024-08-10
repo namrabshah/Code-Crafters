@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies in Agriculture</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            color: #2e8b57;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.8em;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 40px;
+            font-size: 1.8em;
+            position: relative;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #2e8b57;
+        }
+
+        p {
+            line-height: 1.7;
+            margin: 20px 0;
+            font-size: 1.1em;
+            text-align: justify;
+            color: #555;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 12px 25px;
+            background-color: #2e8b57;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.4);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #1d6a45;
+            box-shadow: 0 5px 20px rgba(46, 139, 87, 0.6);
+        }
+
+        .card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.6em;
+            color: #2e8b57;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            color: #777;
+            font-size: 1.1em;
+        }
+
+        .card-benefits {
+            color: #444;
+            font-size: 1.1em;
+            margin-top: 10px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card-benefits li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-benefits li::before {
+            content: '✔';
+            color: #2e8b57;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .back-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Technologies in Agriculture</h1>
+
+        <div class="card">
+            <h2 class="card-title">1. Precision Agriculture</h2>
+            <p class="card-description">Precision agriculture uses GPS, IoT, and data analytics to optimize crop yields by monitoring and managing field variations.</p>
+            <ul class="card-benefits">
+                <li>Improves crop productivity</li>
+                <li>Reduces waste</li>
+                <li>Optimizes resource use (water, fertilizers, pesticides)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">2. Drones and UAVs</h2>
+            <p class="card-description">Drones are used for aerial imaging, monitoring crop health, irrigation needs, and soil conditions.</p>
+            <ul class="card-benefits">
+                <li>Allows for early detection of crop issues</li>
+                <li>Efficient field management</li>
+                <li>Precise application of inputs</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">3. Smart Irrigation Systems</h2>
+            <p class="card-description">Automated irrigation systems use sensors to monitor soil moisture levels and weather conditions, adjusting water delivery accordingly.</p>
+            <ul class="card-benefits">
+                <li>Reduces water waste</li>
+                <li>Ensures crops receive the right amount of water</li>
+                <li>Lowers energy costs</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2 class="card-title">4. Vertical Farming and Hydroponics</h2>
+            <p class="card-description">Vertical farming involves growing crops in stacked layers, often in controlled indoor environments, while hydroponics grows plants without soil.</p>
+            <ul class="card-benefits">
+                <li>Maximizes space</li>
+                <li>Reduces water usage</li>
+                <li>Allows year-round crop production</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">5. Biotechnology</h2>
+            <p class="card-description">Biotechnology includes genetically modified organisms (GMOs), CRISPR, and other methods to improve crop resilience and yield.</p>
+            <ul class="card-benefits">
+                <li>Develops crops more resistant to pests, diseases, and environmental stresses</li>
+                <li>Leads to higher yields</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">6. Autonomous Machinery</h2>
+            <p class="card-description">Autonomous tractors, harvesters, and planting machines can operate with minimal human intervention.</p>
+            <ul class="card-benefits">
+                <li>Reduces labor costs</li>
+                <li>Increases efficiency</li>
+                <li>Allows for farming operations 24/7</li>
+            </ul>
+        </div>
+
+        <!-- Add more cards as needed -->
+
+        <a href="index.html" class="back-button">Back to Main Page</a>
+    </div>
+
+</body>
+
+</html>

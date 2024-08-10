@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Quality Check - 5 Levels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f5e9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .level {
+            margin-bottom: 30px;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .level h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .level p {
+            margin: 10px 0;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .passed {
+            color: #4CAF50;
+        }
+        .failed {
+            color: #e74c3c;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Crop Quality Check</h1>
+
+    <!-- Level 1: Seed Quality -->
+    <div class="level">
+        <h2>Level 1: Seed Quality</h2>
+        <p>Check if the seeds are of high quality and free from damage.</p>
+        <div class="controls">
+            <input type="checkbox" id="level1_checkbox" onclick="updateCheckboxResult('level1')">
+            <label for="level1_checkbox">Passed</label>
+        </div>
+        <p id="result1" class="result">Not Passed ❌</p>
+    </div>
+
+    <!-- Level 2: Soil Condition -->
+    <div class="level">
+        <h2>Level 2: Soil Condition</h2>
+        <p>Ensure the soil has the right nutrients and pH level for the crop.</p>
+        <div class="controls">
+            <input type="checkbox" id="level2_checkbox" onclick="updateCheckboxResult('level2')">
+            <label for="level2_checkbox">Passed</label>
+        </div>
+        <p id="result2" class="result">Not Passed ❌</p>
+    </div>
+
+    <!-- Level 3: Watering -->
+    <div class="level">
+        <h2>Level 3: Watering</h2>
+        <p>Verify that the crop has been watered adequately, neither too little nor too much.</p>
+        <div class="controls">
+            <input type="checkbox" id="level3_checkbox" onclick="updateCheckboxResult('level3')">
+            <label for="level3_checkbox">Passed</label>
+        </div>
+        <p id="result3" class="result">Not Passed ❌</p>
+    </div>
+
+    <!-- Level 4: Pest Control -->
+    <div class="level">
+        <h2>Level 4: Pest Control</h2>
+        <p>Check if proper measures have been taken to prevent pest infestations.</p>
+        <div class="controls">
+            <input type="checkbox" id="level4_checkbox" onclick="updateCheckboxResult('level4')">
+            <label for="level4_checkbox">Passed</label>
+        </div>
+        <p id="result4" class="result">Not Passed ❌</p>
+    </div>
+
+    <!-- Level 5: Growth Progress -->
+    <div class="level">
+        <h2>Level 5: Growth Progress</h2>
+        <p>Evaluate the overall growth and health of the crop to ensure it's developing as expected.</p>
+        <div class="controls">
+            <input type="checkbox" id="level5_checkbox" onclick="updateCheckboxResult('level5')">
+            <label for="level5_checkbox">Passed</label>
+        </div>
+        <p id="result5" class="result">Not Passed ❌</p>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="submit-button" onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+    function updateCheckboxResult(level) {
+        const checkbox = document.getElementById(`${level}_checkbox`);
+        const resultElement = document.getElementById(`result${level.slice(-1)}`);
+
+        if (checkbox.checked) {
+            resultElement.textContent = 'Passed ✅';
+            resultElement.className = 'result passed';
+        } else {
+            resultElement.textContent = 'Not Passed ❌';
+            resultElement.className = 'result failed';
+        }
+    }
+
+    function submitForm() {
+        alert('Your selections have been submitted.');
+        window.location.href = 'index.html'; // Redirect to the main page
+    }
+</script>
+
+</body>
+</html>
